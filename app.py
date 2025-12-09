@@ -3,8 +3,7 @@ import fitz  # PyMuPDF
 from groq import Groq
 
 
-GROQ_API_KEY = "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"
-client = Groq(api_key=GROQ_API_KEY)
+client = Groq(api_key=st.secrets["GROQ_API_KEY"])
 
 
 st.title("Python Project 2 – Question 4")
@@ -61,3 +60,4 @@ Now answer the user question: {question}
 
         st.subheader("AI Response")
         st.write(answer)
+
